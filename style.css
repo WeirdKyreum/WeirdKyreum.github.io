@@ -89,7 +89,10 @@ footer {
   height: auto;
   transition: opacity 0.3s ease;
 }
-
+#taikoImg {
+  width: 300px;
+  height: auto;
+}
 /* Media query to hide the QR code on smaller screens */
 @media (max-width: 800px) {
   #qrCodeImg {
