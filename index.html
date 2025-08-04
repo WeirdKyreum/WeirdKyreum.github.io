@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marc's Assignment 2</title>
+  <link href="style.css" rel="stylesheet" />
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <div id="mainMenuScreen" class="screen active">
+    <h1 class="main-title">Arcade Video Games Main Menu</h1>
+    <div id="mainMenu">
+      <div class="menu-box lightblue"><button onclick="showScreen('history')">History</button></div>
+      <div class="menu-box lightgreen"><button onclick="showScreen('quiz')">Quiz</button></div>
+      <div class="menu-box yellow"><button onclick="showScreen('game')">Taiko Minigame</button></div>
+      <div class="menu-box pink"><button onclick="showScreen('qr')">QR Code</button></div>
+    </div>
+  </div>
+
+  <div id="history" class="screen">
+    <h1>What is a Arcade Video Game</h1>
+    <p>An arcade video game is an arcade game that takes player input from its controls,
+       processes it through electrical or computerized components,
+       and displays output to an electronic monitor or similar display. 
+       All arcade video games are coin-operated or accept other means of payment, 
+       housed in an arcade cabinet, and located in amusement arcades alongside other kinds of arcade games. 
+       Until the early 2000s, arcade video games were the largest and most technologically advanced segment of the video game industry.</p>
+    <h2>History</h2>
+    <p>  Games of Skill were popular amusement-park midway attractions from the 19th century on. 
+         With the introduction of electricity and coin-operated machines, they facilitated a viable business. 
+         When pinball machines with electric lights and displays were introduced in 1933 
+         (but without the user-controller flippers which would not be invented until 1947) 
+         these machines were seen as games of luck. Numerous states and cities treated them as amoral playthings for rebellious young people, 
+         and banned them into the 1960s and 1970s.
+
+         Electro-mechanical games (EM games) appeared in arcades in the mid-20th century. 
+         Following Sega's EM game Periscope (1966), the arcade industry experienced a "technological renaissance" driven by "audio-visual" EM novelty games, 
+         establishing the arcades as a suitable environment for the introduction of commercial video games in the early 1970s.
+         In the late 1960s, college student Nolan Bushnell had a part-time job at an arcade where he became familiar with EM games such as Chicago Coin's racing game Speedway (1969), 
+         watching customers play and helping to maintain the machinery, while learning the game business.
+
+        The early mainframe game Spacewar! (1962) inspired the first commercial arcade video game, 
+        Computer Space (1971), created by Nolan Bushnell and Ted Dabney and released by Nutting Associates. 
+        It was demonstrated at the Amusement & Music Operators Association (AMOA) show in October 1971. 
+        Another Spacewar-inspired coin-operated video game, Galaxy Game, was demonstrated at Stanford University in November 1971.
+        Bushnell and Dabney followed their Computer Space success to create - with the help of Allan Alcorn - a table-tennis game, Pong, released in 1972. 
+        Pong became a commercial success, leading numerous other coin-op manufacturers to enter the market.</p>
+    <h2>Taiko no Tatsujin</h2>
+    <p> Taiko no Tatsujin is a Japanese video game series developed and published by Namco (now Bandai Namco Entertainment).
+        In the games, players simulate playing a taiko drum in time with music. 
+        The series has released games for the arcade and for console and mobile platforms including PlayStation 2, Advanced Pico Beena, PlayStation Portable, Nintendo DS, Wii, Nintendo 3DS, Wii U, PlayStation Vita, PlayStation 4, PlayStation 5, Nintendo Switch, Xbox One, Xbox Series X/S, Microsoft Windows, iOS, Android and Japanese feature phones.
+        While the series is primarily designed for use within Japan, 
+        localized versions are also available in English, Chinese and Korean languages.
+    </p>
+    <button onclick="showScreen('mainMenuScreen')">Back</button>
+  </div>
+
+  <div id="quiz" class="screen">
+    <h1>MCQ Quiz</h1>
+    <fieldset>
+      <legend>1. What type of Game is Taiko no Tatsujin</legend>
+      <input type="radio" name="q1" value="Claw Machine" /> Claw Machine
+      <input type="radio" name="q1" value="Rhythm Game" /> Rhythm Game
+      <input type="radio" name="q1" value="Photo Booth" /> Photo Booth
+      <input type="radio" name="q1" value="Slot Machine" /> Slot Machine
+    </fieldset>
+    <fieldset>
+      <legend>2. What company publish Taiko no Tatsujin</legend>
+      <input type="radio" name="q2" value="Namco" /> Namco
+      <input type="radio" name="q2" value="Blizzard" /> Blizzard
+      <input type="radio" name="q2" value="Roblox Studios" /> Roblox Studios
+      <input type="radio" name="q2" value="Valve" /> Valve
+    </fieldset>
+    <fieldset>
+      <legend>3. Where did Taiko no Tatsujin developed from?</legend>
+      <input type="radio" name="q3" value="America" /> America
+      <input type="radio" name="q3" value="China" /> China
+      <input type="radio" name="q3" value="Singapore" /> Singapore
+      <input type="radio" name="q3" value="Japan" /> Japan
+    </fieldset>
+    <button id="btnSubmit">Submit Quiz</button>
+    <h3 id="scorebox">Not submitted</h3>
+    <button onclick="showScreen('mainMenuScreen')">Back</button>
+  </div>
+
+  <div id="game" class="screen">
+    <button id="startGameBtn">Start Game</button>
+
+    <div class="ui">
+      <div>Score: <span id="score">0</span></div>
+      <div>Lives: <span id="lives">5</span></div>
+      <div>Time: <span id="timer">60</span></div>
+      <button id="restartButton" style="display:none;">Restart</button>
+    </div>
+
+    <div class="game">
+      <div id="hitZone"></div>
+      <div id="noteContainer"></div>
+      <div id="flash"></div>
+    </div>
+
+    <button onclick="showScreen('mainMenuScreen')" style="margin-top: 20px;">Back</button>
+  </div>
+
+  <div id="qr" class="screen">
+    <h1>QR Code</h1>
+    <footer>
+    <img id="qrCodeImg" src="qrcodeimg.png" alt="QR Code for game">
+   </footer>
+  <button onclick="showScreen('mainMenuScreen')">Back</button>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
